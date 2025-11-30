@@ -52,6 +52,7 @@ bash
 git clone https://github.com/Manikandanelaiyaraj/Event_management/git.com
 
 2. ## Create a virtual environment and activate it:
+cd Event_Management_System
 
 ```
 bash
