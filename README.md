@@ -83,34 +83,33 @@ python app.py
 
 ## Screenshots
 
-## Screenshots
-
 ### Home Page
-![Home Page](https://raw.githubusercontent.com/Manikandanelaiyaraj/Event_management/main/results/Homepage.png)
+![Home Page](results/Home_page.png)
 
 ### All Events Page
-![All Events](https://raw.githubusercontent.com/Manikandanelaiyaraj/Event_management/main/results/All_events_page.png)
+![All Events](results/All_events_page.png)
 
 ### Allocation Page
-![Allocation Page](https://raw.githubusercontent.com/Manikandanelaiyaraj/Event_management/main/results/Allocation_page.png)
+![Allocation Page](results/Allocation_page.png)
 
 ### Create New Event
-![Create New Event](https://raw.githubusercontent.com/Manikandanelaiyaraj/Event_management/main/results/Create_new_Event.png)
+![Create New Event](results/Create_new_Event.png)
 
 ### Create Resource
-![Create Resource](https://raw.githubusercontent.com/Manikandanelaiyaraj/Event_management/main/results/Create_resource.png)
+![Create Resource](results/Create_resource.png)
 
 ### Edit Event
-![Edit Event](https://raw.githubusercontent.com/Manikandanelaiyaraj/Event_management/main/results/Edit_Event.png)
+![Edit Event](results/Edit_Event.png)
 
 ### Edit Resource
-![Edit Resource](https://raw.githubusercontent.com/Manikandanelaiyaraj/Event_management/main/results/Edit_resource.png)
+![Edit Resource](results/Edit_resource.png)
 
 ### Report Page
-![Report Page](https://raw.githubusercontent.com/Manikandanelaiyaraj/Event_management/main/results/Repot_page.png)
+![Report Page](results/Repot_page.png)
 
 ### Resource Page
-![Resource Page](https://raw.githubusercontent.com/Manikandanelaiyaraj/Event_management/main/results/Resource_page.png)
+![Resource Page](results/Resource_page.png)
+
 
 ## Contributing 
 
