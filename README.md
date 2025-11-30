@@ -86,22 +86,22 @@ python app.py
 ## Screenshots
 
 ## Home Page
-![Login](results/Login_Page.png)
+![Home](image-1 home.jpeg)
 
 ## Register 
-![Register](results/Register_Page.png)
+![All Events](image-2 all events.jpeg)
 
 ### Dashboard
-![Dashboard](results/Index.png)
+![Create New Event](image-3 create new event.jpeg)
 
 ### Product
-![Product](results/Product_Page.png)
+![Edit Event](image-4 edit event.jpeg)
 
 ## Product Add
-![Product Add](results/Add_Product.png)
+![All Resources](image-5 all resources.jpeg)
 
 ## Location View 
-![Location](results/Location_Page.png)
+![Create Resources](image-6 create resources.jpeg)
 
 ## Location Add
 ![Location Add](results/Add_Location.png)
