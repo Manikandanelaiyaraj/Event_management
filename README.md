@@ -85,7 +85,7 @@ python app.py
 
 ## Screenshots
 
-## Login Page
+## Home Page
 ![Login](results/Login_Page.png)
 
 ## Register 
