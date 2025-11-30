@@ -85,35 +85,32 @@ python app.py
 
 ## Screenshots
 
-## Home Page
-![Home](results/Home_page.png)
+### Home Page
+![Home Page](results/Home_page.png)
 
-## Register 
-![All Events](image-2 all events.jpeg)
+### All Events Page
+![All Events](results/All_events_page.png)
 
-### Dashboard
-![Create New Event](image-3 create new event.jpeg)
+### Allocation Page
+![Allocation Page](results/Allocation_page.png)
 
-### Product
-![Edit Event](image-4 edit event.jpeg)
+### Create New Event
+![Create New Event](results/Create_new_Event.png)
 
-## Product Add
-![All Resources](image-5 all resources.jpeg)
+### Create Resource
+![Create Resource](results/Create_resource.png)
 
-## Location View 
-![Create Resources](image-6 create resources.jpeg)
+### Edit Event
+![Edit Event](results/Edit_Event.png)
 
-## Location Add
-![Location Add](results/Add_Location.png)
+### Edit Resource
+![Edit Resource](results/Edit_resource.png)
 
-## Movement View
-![Movemnets ](results/Movements_Page.png)
+### Report Page
+![Report Page](results/Repot_page.png)
 
-## Movement Add
-![Movement Add](results/Add_Movement.png)
-
-### Reports
-![Reports](results/Report_Page.png)
+### Resource Page
+![Resource Page](results/Resource_page.png)
 
 ## Contributing 
 
