@@ -86,7 +86,7 @@ python app.py
 ## Screenshots
 
 ## Home Page
-![Home](image-1 home.jpeg)
+![Home](static/images/Home_page.png)
 
 ## Register 
 ![All Events](image-2 all events.jpeg)
