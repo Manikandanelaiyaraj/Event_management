@@ -84,7 +84,7 @@ python app.py
 ## Screenshots
 
 ### Home Page
-![Home Page](results/Home_page.png)
+![Home Page](results/Homepage.png)
 
 ### All Events Page
 ![All Events](results/All_events_page.png)
