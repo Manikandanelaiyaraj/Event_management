@@ -1,9 +1,9 @@
 # Event_management
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Praveenku-mar/Inventory_Management_System)
-![GitHub contributors](https://img.shields.io/github/contributors/Praveenku-mar/Inventory_Management_System)
-![GitHub language count](https://img.shields.io/github/languages/count/Praveenku-mar/Inventory_Management_System)
-![License](https://img.shields.io/github/license/Praveenku-mar/Inventory_Management_System)
+![GitHub repo size](https://img.shields.io/github/repo-size/Manikandanelaiyaraj/Event_management)
+![GitHub contributors](https://img.shields.io/github/contributors/Manikandanelaiyaraj/Event_management)
+![GitHub language count](https://img.shields.io/github/languages/count/Manikandanelaiyaraj/Event_management)
+![License](https://img.shields.io/github/license/Manikandanelaiyaraj/Event_management)
 
 A web-based Event Management System built with Python Flask, SQLAlchemy, and Bootstrap.
 This application allows organizations to efficiently create events, manage resources, allocate them to events, monitor schedules, and maintain real-time event reports.
@@ -24,10 +24,8 @@ This application allows organizations to efficiently create events, manage resou
 ---
 
 ## Features
-
--User authentication: Register, login, and logout securely.
--Event management: Add, update, and delete events.
--Resource management: Add, update, and delete event resources.
+-Event management: Add, update events.
+-Resource management: Add, update event resources.
 -Resource allocation: Assign resources to events with conflict validation.
 -Dashboard: View upcoming events, allocated resources, and schedules.
 -Responsive design: Works well on desktop and mobile devices.
@@ -36,9 +34,9 @@ This application allows organizations to efficiently create events, manage resou
 
 ## Technologies Used
 
-- **Backend:** Python, Flask, Flask-Login, SQLAlchemy  
-- **Frontend:** HTML, CSS, Bootstrap, JavaScript  
-- **Database:** SQLite (can be replaced with MySQL/PostgreSQL)  
+- **Backend:** Python, Flask SQLAlchemy  
+- **Frontend:** HTML, CSS, Bootstrap.
+- **Database:** MySQL  
 - **Version Control:** Git & GitHub  
 
 ---
