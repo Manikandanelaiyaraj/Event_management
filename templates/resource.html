@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>All Resources</h2>
+
+<button class="create_button">
+    <a href="/resource_create">Create New</a>
+</button>
+
+<table class="resource_table">
+    <thead>
+        <tr>
+            <th>Resource Name</th>
+            <th>Resource Type</th>
+            <th>Update</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for r in all_resources %}
+        <tr>
+            <td>{{ r.resource_name }}</td>
+            <td>{{ r.resource_type }}</td>
+            <td>
+                <button class="edit_btn">
+                    <a href="/resource_update/{{ r.resource_id }}">Edit</a>
+                </button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

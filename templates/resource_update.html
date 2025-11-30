@@ -1,0 +1,36 @@
+{%extends 'base.html' %}
+{% block content %}
+<h2>Update Resource</h2>
+<button><a href="/resource">Back</a></button>   
+<form method="POST">
+    <table>  
+        <tr>
+            <td>
+                <label for="resource_name">Resource Name:</label>
+                <input type="text" id="resource_name" name="resource_name" value="{{ resource.resource_name }}" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="resource_type">Resource Type:</label>
+                <input type="text" id="resource_type" name="resource_type" value="{{ resource.resource_type }}" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Update</button>
+            </td>
+        </tr>
+        {% if error_message %}
+        <tr>
+            <td style="color: red;">{{ error_message }}</td>
+        </tr>
+        {% endif %}
+        {%if success_message %}
+        <tr>
+            <td style="color: green;">{{ success_message }}</td>        
+        </tr>
+        {% endif %}
+    </table>
+</form>
+{% endblock %}

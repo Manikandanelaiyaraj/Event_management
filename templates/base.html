@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Event System{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='events.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='allocation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='resource.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='event_create.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='edits.css') }}">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='resource_create.css') }}">
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <span class="brand">Event Scheduling</span>
+        </div>
+
+        <div class="nav-right">
+            <a href="/">Home</a>
+            <a href="/events">Events</a>
+            <a href="/resource">Resources</a>
+            <a href="/allocation">Allocation</a>
+            <a href="/report">Report</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

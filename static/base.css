@@ -1,0 +1,154 @@
+/* =========================
+   THEME VARIABLES (put in base.css)
+   ========================= */
+:root{
+  --primary-color: #800020;    /* burgundy */
+  --secondary-color: #c9a96e;  /* gold */
+  --hover-bg: #fffbf5;         /* very light cream */
+  --page-bg: #fcf8f3;          /* overall page background */
+  --text-color: #444;
+  --table-bg: #ffffff;
+}
+
+/* =========================
+   GLOBAL
+   ========================= */
+* { box-sizing: border-box; }
+html,body{
+  height:100%;
+  margin:0;
+  padding:0;
+  background:var(--page-bg);
+  color:var(--text-color);
+  font-family: 'Georgia', serif;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+nav{
+  width:100%;
+  padding:14px 28px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background: var(--table-bg);                        /* white panel */
+  border-bottom: 3px double var(--secondary-color);   /* gold double line */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+  position: relative;
+  z-index: 10;
+}
+
+/* Brand */
+.nav-left .brand{
+  font-size:20px;
+  font-weight:700;
+  color:var(--primary-color);
+  letter-spacing:0.6px;
+}
+
+/* Nav links wrapper */
+.nav-right{
+  display:flex;
+  gap:26px;
+  align-items:center;
+}
+
+/* Individual links */
+.nav-right a{
+  color:var(--primary-color);
+  font-weight:600;
+  font-size:16px;
+  text-decoration:none;
+  padding:6px 10px;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+/* Hover / active state for nav links */
+.nav-right a:hover,
+.nav-right a.active {
+  background:var(--primary-color);
+  color:#f7f0da; /* cream text */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Optional: make navbar sticky (uncomment if desired)
+nav { position: sticky; top: 0; backdrop-filter: blur(4px); }
+*/
+
+/* =========================
+   CONTAINER
+   ========================= */
+.container{
+  max-width:1100px;
+  margin: 18px auto;
+  padding: 0 18px 48px 18px;
+}
+
+/* Responsive: tighten spacing on small screens */
+@media (max-width:900px){
+  nav { padding:10px 14px; }
+  .nav-right { gap:12px; font-size:15px; }
+  .nav-left .brand { font-size:18px; }
+  .container { padding: 0 12px 36px 12px; max-width:95%; }
+}
+/* =========================
+   CONTAINER (white card wrapper)
+   ========================= */
+.container{
+  max-width: 1050px;                 /* card width — reduces excess white at sides */
+  margin: 28px auto;                 /* center on page */
+  padding: 36px 32px;                /* inner spacing around heading/table */
+  background: var(--table-bg);       /* white card background */
+  border: 1px solid var(--table-border);  /* gold border */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);/* stronger card shadow */
+  border-radius: 0;                  /* keep square corners */
+  position: relative;
+}
+
+/* Heading inside the card — sits centered and aligned with table */
+.container h2,
+h2 {
+  display: block;
+  width: 100%;
+  margin: 0 auto 6px auto;               /* small gap below heading */
+  text-align: center;
+  color: var(--primary-color);
+  font-family: 'Georgia', serif;
+  font-size: 32px;
+  padding-bottom: 10px;
+  border-bottom: 4px double var(--secondary-color);
+}
+
+/* Table sits inside the card; reduce top margin so it fits in card nicely */
+table {
+  width: 94%;                     /* slightly narrower so the gold border shows */
+  margin: 22px auto 10px auto;    /* less top gap, centered inside card */
+  border-collapse: collapse;
+  background-color: var(--table-bg);
+  font-family: 'Georgia', serif;
+  border: 1px solid var(--table-border);
+  box-shadow: none;               /* keep card shadow only (not double shadow) */
+}
+
+/* If you used the earlier 'table + button' absolute create btn,
+   ensure it positions relative to this container */
+table + button {
+  right: calc((100% - 1050px) / 2 + 40px); /* keeps it aligned with the card */
+}
+
+/* Responsive adjustments: card becomes full-width with inner padding on narrow screens */
+@media (max-width: 900px) {
+  .container {
+    max-width: 96%;
+    padding: 18px;
+    margin: 16px auto;
+  }
+
+  table {
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  h2 { font-size: 24px; padding-bottom: 8px; }
+}

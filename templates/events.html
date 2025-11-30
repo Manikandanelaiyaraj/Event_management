@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+<h2>All Events</h2>
+<table>
+    <thead>
+        <tr>
+            <td>Event_Name</td>
+            <td>Start_Time</td>
+            <td>End_Time</td>
+            <td>Description</td>
+            <td>Status</td>
+            <td>Update</td>
+        </tr>
+    </thead>
+    <tbody>
+        {%for d in all_events%}
+        <tr>
+            <td>{{d.title}}</td> 
+            <td>{{d.start_time}}</td>
+            <td>{{d.end_time}}</td>
+            <td>{{d.description}}</td>
+            {% if d.start_time> now %}
+            <td>Upcoming</td>
+            {% elif d.end_time< now %}
+            <td>Completed</td>
+            {% else %}
+            <td>Ongoing</td>
+            {% endif %}
+            {%if d.end_time<now%}
+            <td><button class="disabled">
+                <a href="#">Closed</a>
+            </button>
+
+            </td>
+            {%else%}
+            <td><button><a href="/edits/{{d.event_id}}">Edit</a></button> </td>
+            {%endif%}
+            
+            </tr>
+        {%endfor%}
+    </tbody>
+    <button><a href="/events_create">Create New</a></button>
+</table>
+{% endblock %}

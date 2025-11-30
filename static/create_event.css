@@ -1,0 +1,139 @@
+/* ------------------------------------------------
+   CREATE EVENT FORM — Matching Burgundy/Gold Theme
+---------------------------------------------------*/
+
+/* Make container relative so create button can position correctly */
+.container {
+    position: relative;
+}
+
+/* Form table card */
+form table {
+    width: 70%;
+    margin: 50px auto 25px auto;
+    background-color: var(--table-bg);          /* white */
+    border: 1px solid var(--table-border);      /* gold border */
+    border-collapse: collapse;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);     /* soft shadow */
+}
+
+/* Table spacing */
+form table td {
+    padding: 18px;
+    border-bottom: 1px dashed #d9c39b; /* gold dashed separator */
+}
+
+/* Remove bottom border for last row */
+form table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Labels */
+form label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--primary-color);               /* Burgundy */
+    font-family: 'Georgia', serif;
+}
+
+/* Inputs and Select (square + cream) */
+form input[type="text"],
+form input[type="datetime-local"],
+form select {
+    width: 100%;
+    padding: 12px 14px;
+    background: #fcf8f3;                        /* cream */
+    border: 1px solid var(--secondary-color);   /* gold outline */
+    border-radius: 0px;                         /* no rounding */
+    font-size: 15px;
+    color: #444;
+}
+
+/* Focus effect — burgundy border */
+form input:focus,
+form select:focus {
+    background: #ffffff;
+    border-color: var(--primary-color);          /* burgundy */
+    box-shadow: 0 0 5px rgba(128,0,32,0.25);
+    outline: none;
+}
+
+/* Submit button */
+form button[type="submit"] {
+    width: 100%;
+    padding: 12px 18px;
+    margin-top: 6px;
+    background-color: var(--primary-color);
+    color: #f7f0da;
+    border: none;
+    border-radius: 0;                            /* square */
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #5e0016;
+}
+
+/* Back button (top) */
+button {
+    background-color: var(--primary-color);
+    color: #f7f0da;
+    padding: 8px 16px;
+    margin: 10px 20px;
+    border: none;
+    border-radius: 0;
+    font-family: 'Georgia', serif;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5e0016;
+}
+
+button a {
+    color: #f7f0da;
+    text-decoration: none;
+}
+
+/* ================================
+   CREATE BUTTON AT TOP-RIGHT CORNER
+   (works WITHOUT HTML CHANGE)
+   ================================ */
+
+table + button {
+    position: absolute;
+    right: 40px;        /* distance from right side of card */
+    top: 10px;          /* distance from top inside container */
+    padding: 10px 22px;
+    background-color: var(--primary-color);
+    color: #f7f0da;
+    border: none;
+    border-radius: 0;
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+table + button:hover {
+    background-color: #5e0016;
+}
+
+table + button a {
+    color: #f7f0da;
+    text-decoration: none;
+    display: block;
+}
+
+/* Prevent header row hover color change */
+table thead tr:hover {
+    background-color: var(--primary-color) !important;
+    box-shadow: none !important;
+    cursor: default !important;
+}

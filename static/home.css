@@ -1,0 +1,43 @@
+/* ----------------------------------------
+   HOME PAGE (matching full theme)
+-----------------------------------------*/
+
+/* Center content nicely */
+.container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Main Heading */
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 32px;
+    color: var(--primary-color);   /* burgundy */
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 4px double var(--secondary-color); /* gold double line */
+    display: inline-block;
+}
+
+/* Sub text */
+p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Optional: add a soft card feel around content */
+.container {
+    background: #ffffff;
+    width: 70%;
+    margin: 40px auto;
+    padding: 30px 20px;
+    border: 1px solid var(--secondary-color); /* gold border */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+}
+
+/* Smooth hover glow (optional) */
+.container:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+    transition: 0.3s ease;
+}

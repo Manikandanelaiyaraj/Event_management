@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %} 
+<h2>All Reports</h2>
+<table>
+    <thead>
+        <tr>
+            <td>Resource</td>
+            <td>Utilizing Hrs for
+                 Completed Event</td>
+            <td>Upcoming Booking</td>
+        </tr>
+    </thead>
+    <tbody>
+        {%for res in resource%}
+        <tr>
+            <td>{{res.resource_name}}</td>
+            <td>
+            {% set ns = namespace(total=0, total_minutes=0) %}
+            {% for dalloc, deve, dres in report %}
+                {% if res.resource_name == dres.resource_name and deve.start_time < today and deve.end_time<today %}
+                    {% set ns.total = ns.total + 1 %}
+                    {% set sh = deve.start_time.hour %}
+                    {% set sm = deve.start_time.minute %}
+                    {% set eh = deve.end_time.hour %}
+                    {% set em = deve.end_time.minute %}
+                    {% set start_min = sh * 60 + sm %}
+                    {% set end_min = eh * 60 + em %}
+                    {% set dur = end_min - start_min %}
+                    {% set ns.total_minutes = ns.total_minutes + dur %}
+                {% endif %}
+            {% endfor %}
+            {% set total_hours = (ns.total_minutes // 60) %}
+            {% set total_mins  = (ns.total_minutes % 60) %}
+            {{total_hours}} hrs {{total_mins}} mins
+            </td>
+            <td>
+            {% set ns = namespace(total=0) %}
+            <ol>
+            {%for dalloc,deve,dres in report%}
+            
+                {%if res.resource_name==dres.resource_name and deve.start_time >=today%}
+                {% set ns.total = ns.total + 1 %}
+                <li>{{deve.title}}</li>
+                {%endif%}
+            
+            {%endfor%}
+            </ol>
+            {% if ns.total==0 %}
+                No Upcoming Bookings
+            {% endif %}
+            </td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,91 @@
+/* ===============================
+   ALLOCATIONS PAGE — THEME MATCHED
+   =============================== */
+
+/* Page heading style */
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-family: 'Georgia', serif;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 4px double var(--secondary-color);
+    display: inline-block;
+}
+
+/* Table container */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: var(--table-bg);
+    font-family: 'Georgia', serif;
+    border: 1px solid var(--table-border);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+/* Header row */
+th {
+    background-color: var(--primary-color);
+    color: #f7f0da;
+    padding: 14px 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+/* remove border on last column */
+th:last-child {
+    border-right: none;
+}
+
+/* Body cells */
+td {
+    padding: 12px 18px;
+    border-right: 1px solid #eee;
+    border-bottom: 1px dashed #d9c39b; /* gold dashed */
+}
+
+/* clean last column */
+td:last-child {
+    border-right: none;
+}
+
+/* clean last row */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Subtle zebra rows */
+tbody tr:nth-child(even) {
+    background-color: #faf7f2;
+}
+
+/* ===============================
+   HOVER EFFECT — ONLY GOLD LEFT BAR
+   =============================== */
+
+tbody tr:hover {
+    background-color: transparent !important;     /* no row color */
+    box-shadow: inset 3px 0 0 0 var(--secondary-color); /* GOLD LEFT BAR */
+    cursor: default;
+    transition: 0.15s ease;
+}
+
+/* Header row should NOT change on hover */
+thead tr:hover {
+    background-color: var(--primary-color) !important;
+    box-shadow: none !important;
+    cursor: default !important;
+}
+/* Center card behind the allocation table */
+.container {
+    max-width: 1000px;              /* PERFECT width for your table */
+    margin: 30px auto;              /* centered */
+    padding: 40px;
+    background: #ffffff;            /* white card background */
+    border: 1px solid var(--table-border);  /* gold border */
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+    border-radius: 0;               /* keep square look */
+}

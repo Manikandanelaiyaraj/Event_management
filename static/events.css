@@ -1,0 +1,136 @@
+/* ----------------------------------------
+   ALL EVENTS PAGE (perfect aligned version)
+-----------------------------------------*/
+
+/* Container must be relative for button placement */
+.container {
+    position: relative;
+    width: 100%;
+    text-align: center;   /* centers heading */
+}
+
+/* Heading block */
+h2 {
+    display: inline-block;
+    margin: 30px auto 20px auto;
+    padding-bottom: 10px;
+    color: var(--primary-color);
+    font-family: 'Georgia', serif;
+    border-bottom: 4px double var(--secondary-color);
+}
+
+/* ----------------------------------------
+   CREATE BUTTON — Right Corner, Same Line
+-----------------------------------------*/
+
+.container > button {
+    position: absolute;
+    top: 30px;          /* SAME vertical level as heading */
+    right: 40px;        /* right aligned inside container */
+    padding: 10px 22px;
+
+    background-color: var(--primary-color);
+    color: #f7f0da;
+    border: none;
+    border-radius: 0;
+    font-family: 'Georgia', serif;
+    cursor: pointer;
+
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 10;
+}
+
+.container > button:hover {
+    background-color: #5e0016;
+}
+
+.container > button a {
+    color: #f7f0da;
+    text-decoration: none;
+}
+
+/* ----------------------------------------
+   TABLE — pushed down to avoid overlap
+-----------------------------------------*/
+
+table {
+    width: 90%;
+    margin: 60px auto 20px auto;  /* push table downward */
+    border-collapse: collapse;
+    background-color: var(--table-bg);
+    border: 1px solid var(--table-border);
+    font-family: 'Georgia', serif;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+/* Header cells */
+thead td {
+    background: var(--primary-color);
+    color: #f7f0da;
+    padding: 14px 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+thead td:last-child {
+    border-right: none;
+}
+
+/* Body cells */
+tbody td {
+    padding: 12px 18px;
+    border-right: 1px solid #eee;
+    border-bottom: 1px dashed #d9c39b;
+}
+
+tbody td:last-child {
+    border-right: none;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect with left gold bar */
+tbody tr:hover {
+    background-color: var(--hover-bg);
+    box-shadow: inset 3px 0 0 var(--secondary-color);
+    transition: 0.2s ease;
+}
+
+/* Edit button */
+tbody button {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+tbody button:hover {
+    background-color: #5e0016;
+}
+
+tbody button a {
+    color: #f7f0da;
+    text-decoration: none;
+    display: block;
+}
+tbody button.disabled {
+    background-color: grey;
+    border: none;
+    padding: 6px 12px;
+    cursor: not-allowed;
+    border-radius: 0;
+}

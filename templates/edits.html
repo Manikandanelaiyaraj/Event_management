@@ -1,0 +1,59 @@
+{%extends 'base.html'%}
+{%block content%}
+<h2>Edit Event</h2>
+<button><a href="/events">Back</a></button>
+<form method="POST">
+    <table>
+        <tr>
+            <td>
+                <label for="event_name">Event Name:</label>
+                <input type="text" id="title" name="title" value="{{ event.title }}" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="event_date">Event Start_Time:</label>
+                <input type="datetime-local" id="start_time" name="start_time" value="{{ event.start_time }}" required>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <label for="event_enddate">Event End_Time:</label>
+                <input type="datetime-local" id="end_time" name="end_time" value="{{ event.end_time }}" required>
+            </td>
+        </tr>
+         <tr>
+            <td>
+                <label for="resource">Event Resource:</label>
+                <select id="resource" name="resource_id" required>
+                    {% for resource in resources %}
+                    <option value="{{ resource.resource_id}}">{{ resource.resource_name }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+         <tr>
+            <td>
+                <label for="description">Event Description:</label>
+                <input type="text" id="description" name="description" value="{{ event.description }}" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Update</button>
+            </td>
+        </tr>
+        {% if error_message %}
+        <tr>
+            <td style="color: red;">{{ error_message }}</td>
+        </tr>
+        {% endif %}
+        {% if success_message %}
+        <tr>
+            <td style="color: green;">{{ success_message }}</td>
+        </tr>
+        {% endif %}
+    </table>
+</form>
+{%endblock%}

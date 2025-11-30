@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+<h2>All Allocations</h2>
+<form method="POST">
+    <table>
+        <tr>
+            <th>Event Name</th>
+            <th>Resource Name</th>
+            <th>Start_Date - End_Date</th>
+            <th>Event_Duration</th>
+        </tr>
+        {% for alloc,event,res in all_allocations %}
+        <tr>
+            <td>{{ event.title }}</td>
+            <td>{{ res.resource_name }}</td>
+            <td>{{ event.start_time.date() }} - {{ event.end_time.date() }}</td>
+            <td>{{ event.start_time.time() }} -{{event.end_time.time()}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
