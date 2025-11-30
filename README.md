@@ -89,26 +89,28 @@ python app.py
 ### All Events Page
 ![All Events](results/All_events_page.png)
 
-### Allocation Page
-![Allocation Page](results/Allocation_page.png)
-
 ### Create New Event
 ![Create New Event](results/Create_new_Event.png)
-
-### Create Resource
-![Create Resource](results/Create_resource.png)
 
 ### Edit Event
 ![Edit Event](results/Edit_Event.png)
 
+### Resource Page
+![Resource Page](results/Resource_page.png)
+
+### Create Resource
+![Create Resource](results/Create_resource.png)
+
 ### Edit Resource
 ![Edit Resource](results/Edit_resource.png)
+
+### Allocation Page
+![Allocation Page](results/Allocation_page.png)
 
 ### Report Page
 ![Report Page](results/Repot_page.png)
 
-### Resource Page
-![Resource Page](results/Resource_page.png)
+
 
 
 ## Contributing 
